@@ -1,0 +1,193 @@
+* {
+    border: 0px;
+    outline: none;
+    box-shadow: none;
+    separator: none;
+    border-color: #242133;
+    text-underline: false;
+}
+
+window {
+  width: 39%;
+  height: 50%;
+  border: 0px;
+  background-color: #242133;
+  spacing: 0px;
+  border-radius: 10px;
+  border-color: #242133;
+  orientation: vertical;
+}
+
+mainbox {
+  margin: 2px;
+  enabled: true;
+  orientation: vertical;
+  background-color: transparent;
+  children: [inputbar, listbox];
+}
+
+inputbar {
+  enabled: true;
+  padding: 10px 10px 170px 10px;
+  margin: 10px;
+  border-radius: 5px;
+  separator: 0px;
+  background-color: transparent;
+  background-image: url("~/Downloads/anime-bg.jpeg");
+  orientation: horizontal;
+  children: [entry, dummy, mode-switcher];
+}
+
+mode-switcher {
+  enabled: true;
+  spacing: 10px;
+  background-color: transparent;
+}
+
+entry {
+    background-color: #f9e6ae;  /* Cor de fundo do campo de entrada */
+    text-color: #282828;        /* Cor do texto */
+    placeholder: " Search";      /* Texto de placeholder */
+    placeholder-color: #242133; /* Cor do placeholder (texto 'Search') */
+    width: 18%;                /* Faz o campo de entrada ocupar toda a largura */
+    border-radius: 6px;
+    padding: 8px;
+    enabled: true;
+    expand: false;
+    caret-color: transparent;
+    caret-width: 0px;
+}
+
+dummy {
+  expand: true;
+  background-color: transparent;
+}
+
+/* Lista de itens (listbox) */
+listbox {
+    spacing: 10px;                    /* Espaçamento entre os itens */
+    padding: 10px;                    /* Espaçamento interno do listbox */
+    background-color: #242133;        /* Cor de fundo do listbox */
+    orientation: vertical;            /* Orientação dos itens (vertical) */
+    scrollbar: true;                  /* Exibe a barra de rolagem */
+    border-radius: 10px;              /* Cantos arredondados no listbox */
+    width: 100%;                      /* Largura do listbox */
+    /*border-color: #fff;*/
+    border: 2px;
+    separator: 0px;
+    children: [message, listview];
+}
+
+listview {
+  columns: 2;
+  lines: 10;
+  cycle: true;
+  dynamic: true;
+  scrollbar: false;
+  layout: vertical;
+  reverse: false;
+  fixed-height: false;
+  spacing: 10px;
+  border-color: transparent;
+}
+
+message {
+  background-color: transparent;
+  border: 0px;
+  border-color: transparent;
+}
+
+element {
+  enabled: true;
+  spacing: 5px;
+  border: 0px;
+  outline: none;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #242133;
+  cursor: pointer;
+}
+
+element normal.normal {
+  background-color: #242133;
+  text-color: #e0deea;
+}
+
+element normal.active {
+  background-color: #242133;
+  text-color: #e0deea;
+}
+
+element normal.urgent {
+  background-color: #242133;
+  text-color: #e0deea;
+}
+
+element alternate.normal {
+  background-color: #242133;
+  text-color: #e0deea;
+}
+
+element alternate.active {
+  background-color: #242133;
+  text-color: #e0deea;
+}
+
+element alternate.urgent {
+  background-color: #242133;
+  text-color: #e0deea;
+}
+
+element selected.normal {
+  background-color: #f9e6ae;
+  text-color: #282828;
+}
+
+element-icon {
+  background-color: transparent;
+  text-color: #282828;
+  size: 36px;
+  cursor: pointer;
+}
+
+element-text {
+  vertical-align: 0.5;
+  horizontal-align: 0.0;
+}
+
+textbox {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #f9e6ae;
+  text-color: #282828;
+  vertical-align: 0.5;
+  horizontal-align: 0.0;
+}
+
+button {
+  width: 5%;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: #242133;
+  text-color: #fff;
+  cursor: pointer;
+}
+
+button selected {
+  background-color: #f9e6ae;
+  text-color: #282828;
+}
+
+/* Configuração para ocultar o modo e o contador */
+configuration {
+    display-drun: " Apps";  
+    display-run: "";
+    display-filebrowser: " File";
+    display-window: "";
+    show-match: false; 
+    modi: "drun,filebrowser";
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    auto-select: false;
+}
